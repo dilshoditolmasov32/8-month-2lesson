@@ -100,7 +100,7 @@ export default function CustomizedTables({ data }: OrderTableProps) {
                   <Button onClick={() => openModal(item)}>
                     <FaEdit />
                   </Button>
-                  <Button onClick={() => deleteItem(item.id)}>
+                  <Button onClick={() => deleteItem(item)}>
                     <RiDeleteBin6Line />
                   </Button>
                 </TableCell>

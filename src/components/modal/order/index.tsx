@@ -36,7 +36,7 @@ export default function KeepMountedModal({
     service_id: editData?.service_id || "",
   };
 
-  const [params, setParams] = useState({
+  const [params] = useState({
     limit: 10,
     page: 1,
     name: "",
@@ -91,9 +91,9 @@ export default function KeepMountedModal({
     name: string;
   };
 
-  type Props = {
-    data: Item[];
-  };
+  // type Props = {
+  //   data: Item[];
+  // };
   return (
     <Modal open={open} onClose={() => setOpen(false)}>
       <Container component="main" maxWidth="xs">
