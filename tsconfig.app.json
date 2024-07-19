@@ -11,6 +11,9 @@
       "@/*":["./*"],
       "@pages":["./src/pages"],
       "@service":["./src/service/index.ts"],
+      "@table":["./src/components/table/index.tsx"],
+      "@modal":["./src/components/modal/index.tsx"],
+      "@pagination":["./src/components/pagination/index.tsx"],
     },
 
     "moduleResolution": "bundler",

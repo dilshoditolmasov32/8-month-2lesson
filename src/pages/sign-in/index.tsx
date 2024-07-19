@@ -16,6 +16,7 @@ import { signInValidationSchema } from "../../utils/validation";
 import { IconButton, InputAdornment } from "@mui/material";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import { auth } from "../../service/";
+import { toast } from "react-toastify";
 const defaultTheme = createTheme();
 
 export default function SignIn() {
@@ -30,8 +31,11 @@ export default function SignIn() {
   const handleSubmit = async(values:any) => {
   try {
     const response=await auth.sign_in(values)
-    if (response?.status===200) {
-      navigate("/main")
+    if (response.status === 200) {
+      localStorage.setItem("email", response?.data?.email)
+      localStorage.setItem("access_token", response?.data?.access_token);
+      navigate("/main");
+      toast.success("Xush kelibsiz");
     }
   } catch (error) {
     console.log(error)
